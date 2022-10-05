@@ -194,13 +194,9 @@ ccs/v5:
   contents: '"id": "ccs_processing"'
   fn: "*.json"
 cellranger/count_html:
-  - fn: "*.html"
-  - contents: '"command":"Cell Ranger","subcommand":"count"'
-  - contents: '"command": "Cell Ranger", "subcommand": "count"'
+  fn: "*.html"
 cellranger/vdj_html:
-  - fn: "*.html"
-  - contents: '"command":"Cell Ranger","subcommand":"vdj"'
-  - contents: '"command": "Cell Ranger", "subcommand": "vdj"'
+  fn: "*.html"
 checkqc:
   contents: "instrument_and_reagent_type"
   fn: "*.json"
