@@ -27,6 +27,7 @@ class CellRangerCountMixin:
         self.count_warnings_headers = OrderedDict()
 
         for f in self.find_log_files("cellranger/count_html", filehandles=True):
+            log.info("Parsing {}".format(f["fn"]))
             self.parse_count_report(f)
 
         self.cellrangercount_data = self.ignore_samples(self.cellrangercount_data)
@@ -124,6 +125,7 @@ class CellRangerCountMixin:
                 ),
             )
 
+            log.info("Length of cellrangercount_general_data: {}".format(len(self.cellrangercount_general_data)))
             return len(self.cellrangercount_general_data)
 
     def parse_count_report(self, f):
